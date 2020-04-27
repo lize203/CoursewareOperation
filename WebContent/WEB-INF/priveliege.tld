@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<description>autotest defined tag</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>priveliege</short-name>
+	<uri>autotest</uri>
+
+	<tag>
+		<name>enable</name>
+		<tag-class>com.zl.courseware.system.framework.tags.PrivsTag</tag-class>
+		<body-content>JSP</body-content> <!--这里如果设为empty,则无body -->
+		<attribute>
+			<name>operateID</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>functions</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

@@ -1,0 +1,116 @@
+@charset "utf-8";
+#topBar {
+    width: 100%;
+    height: 100%;
+    background: #0e83b9 url("../images/menu_top/bg.jpg") right top no-repeat;
+    overflow: hidden;
+}
+
+#topBar div.logo {
+    height: 60px;
+    float: left;
+}
+
+#topMenu {
+    float: left;
+}
+
+#topMenu ul {
+    overflow: auto;
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+#topMenu ul li {
+    float: left;
+    list-style: none;
+    padding: 10px 15px 4px;
+    margin: 0 auto;
+}
+
+#topMenu ul li:hover {
+    background-color: #0b709f;
+}
+
+#topMenu ul li.menu-item-selected {
+    background-color: #095e86;
+}
+
+#topMenu ul li a {
+    color: #fff;
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#topMenu ul li a img {
+    margin-top: 0;
+    margin-bottom: 2px;
+    display: block;
+    border: none;
+}
+
+#topMenu ul li a span {
+    padding: 0px;
+    margin: 0px auto;
+}
+
+#topMenuRight {
+    float: right;
+    margin-right: 20px;
+}
+
+#logOut {
+    margin-bottom: 12px;
+    float: right;
+    clear: both;
+}
+
+#logOut ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    overflow: auto;
+}
+
+#logOut ul li {
+    float: left;
+    margin-left: 20px;
+    list-style: none;
+}
+
+#logOut ul li img {
+    float: left;
+}
+
+#logOut ul li span {
+    color: #8dd2fe;
+    font-size: 12px;
+    font-family: 'Arial','宋体';
+}
+
+#logOut ul li a {
+    display: block;
+}
+
+#logOut ul li div {
+    background-image: url('../images/menu_top/logout.png');
+}
+
+#logOut ul li div:hover {
+    background-image: url('../images/menu_top/logout-highlight.png');
+}
+
+#logoText {
+    color: #cdecff;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    text-align: right;
+    float: right;
+    padding: 0 2px 8px;
+    margin: 0 auto;
+    display: block;
+}

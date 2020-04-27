@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Tue Aug 28 09:42:47 CST 2018
+sessionFactoryName=com.zl.labmgr.web.system.model.kz.factory.HibernateSessionFactory
+genBasicCompId=true
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=true
+reSettingsFile=
+configFile=/com.zl.labmgr.web/resources/hibernate.cfg.xml
+createConfigFile=false
+addLibs2Classpath=false
