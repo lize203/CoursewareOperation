@@ -1,0 +1,49 @@
+﻿@charset "utf-8"; 
+
+/* 通用 CSS reset 样式重写 */
+*{
+margin:0;
+padding:0;
+border:0;
+outline: none;
+}
+select{
+	border:1px solid #aaa;
+}
+
+table{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+button,input,textarea,select{
+font-size:100%;  /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+ul,ol {
+list-style:none;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+/*label*/
+label{
+		margin-bottom: 0 !important;
+    font-weight: normal !important;
+}
+

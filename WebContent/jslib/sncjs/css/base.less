@@ -1,0 +1,384 @@
+/*字体*/
+@fontSize:12px;
+@fontSizeM:16px;
+@fontFamily:"Microsoft YaHei";
+@fontColor:#666; 
+@fontGray:#aaa;
+@fontChing:#1a96de;
+@fontWhite:#fff;
+
+/*圆角*/
+@borderRadius:8px;
+
+
+/*背景色*/
+@bgWhite:#fff;
+@bgChing:#1a96de;
+@bgGray:#eee;
+
+/*权限*/
+
+/*间距*/
+.ph{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pv{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.phv{
+    padding: 20px;
+}
+.pt{
+    padding-top: 14px;   
+}
+.margin_none{
+    margin: 0 !important;
+}
+.mt{
+    margin-top: 14px;
+}
+.ml{
+    margin-left: 20px;
+}
+.mr{
+   margin-right: 20px; 
+}
+
+/*浮动*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+
+/*显示*/
+.hidden{
+    display: none;
+}
+.block{
+    display: block;
+}
+.inline_block{
+    display: inline-block;
+}
+
+/*icon*/
+.icon{
+    display: inline-block;
+    cursor: pointer;
+}
+.iconl{
+    
+}
+.iconm{
+    
+}
+.icons{
+    
+}
+.icon_close_big{
+    .icon;
+    width: 26px;
+    height: 26px;
+    background: url(../image/icon.png) no-repeat 0 0;
+}
+.icon_triangle_b{
+    .icon;
+    width: 9px;
+    height: 5px;
+    background: url(../image/icon.png) no-repeat 0 -30px;
+}
+.icon_triangle_t{
+    .icon;
+    width: 9px;
+    height: 5px;
+    background: url(../image/icon.png) no-repeat -13px -30px;
+}
+
+body{
+    font-size: @fontSize;
+    font-family: @fontFamily;
+    color: @fontColor;
+    overflow: auto;
+    min-width: 1280px;
+}
+
+a:visited,a:link{
+    color: @fontColor;
+    text-decoration: none;
+}
+
+
+/*遮罩*/
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url(../image/mask.png) repeat;
+}
+
+/*弹窗*/
+.popup{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    background: @bgWhite;
+    border-radius: @borderRadius;
+}
+.popbig{
+    width: 900px;
+    height: 638px;
+    .popup_title{
+        font-size: @fontSizeM;
+        height: 40px;
+        height: 72px;
+        line-height: 72px;
+        .icon_close_big{
+            .fr;
+            margin-top: 23px;
+        }   
+    }
+    .btn_box{
+        position: absolute;
+        bottom: 34px;
+        right: 15px;
+    }
+}
+.popup_title{
+    color: @fontChing;
+    text-align: left;
+    border-bottom: 1px solid #bbbbbb;
+    .ph;
+}
+
+
+/*分步按钮*/
+/*nav_pill 胶囊式nav*/
+.nav_pill{
+    width: 100%;
+    overflow: hidden;
+    .pill{
+        height: 34px;
+        line-height: 34px;
+        background: @bgGray;
+        color: #999;
+        border-radius: 4px;
+        display: inline-block;
+        text-decoration: none;
+        text-indent: 10px;
+        float: left;
+    }
+    .pill_actived{
+        background: @bgChing !important;
+        color: @fontWhite !important;
+    }
+}
+/*nav_tab tab式nav*/
+.nav_tab{
+    width: 100%;
+    border-bottom:1px solid #ddd;
+    .tab{
+        height: 34px;
+        line-height: 34px;
+        background: @bgGray;
+        color: @fontColor;
+        border-radius: 4px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        float: left;
+        border: 1px solid #dddddd;
+        margin-bottom: -1px;
+    }
+    .tab_actived{
+        background: @bgWhite !important;
+        color: #666 !important;
+        border-bottom: 1px #FFF solid;
+    }
+}
+/*nav尺寸*/
+.nav_step_4{
+    .pill,.tab{
+        width: 23.5%;
+        margin-right: 1.9%;
+    }
+}
+.nav_step_8{
+    .pill,.tab{
+        width: 11.5%;
+        margin-right: 0.9%;
+    }
+}
+/*按钮*/
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+.btn_blue{
+    .btn;
+    background: #1a96de;
+    color: @fontWhite !important;
+}
+/*按钮box*/
+.btn_box{
+    overflow: hidden;
+    .btn_blue{
+        .fl;
+        margin: 0 5px;
+    }
+}
+
+/*tip提示*/
+.tip{
+    background: @bgGray;
+    color: @fontColor;
+    border-radius: 4px;
+}
+.tip_l{
+    .tip;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 13px;
+}
+
+/*table*/
+.scn_table{
+    width: 100%;
+    td{
+        min-height: 34px;
+    }
+    .scn_td{
+        .clearfix;
+        .inline_block;
+        .fl;
+    }
+}
+.clearfix,.scn_td{
+    .snc_label,.snc_drop{
+        float: left;
+    }
+}
+.table_fixed{
+    table-layout: fixed;
+}
+
+/*label*/
+.snc_label{
+    min-width: 100px;
+    text-align: right;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding-right: 5px;
+    font-weight: normal;
+}
+
+/*下拉框*/
+.snc_drop{
+    width: 170px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    border:1px solid #aaaaaa;
+    display: inline-block;
+    position: relative;
+//  z-index: 2;
+    cursor: pointer;
+    padding-right: 28px;
+    text-indent: 8px;
+    color: @fontGray;
+    background: @bgWhite;
+    .icon_triangle_b,.icon_triangle_t{
+        position: absolute;
+        right: 12px;
+        top: 15px;
+    }
+    .drop_list{
+        .hidden;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 36px;
+    }
+}
+.snc_drop_point{
+    width: 100%;
+    height: 34px;
+    line-height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+.drop_list{
+     width: 100%;
+     background: @bgWhite;
+     border:1px solid #aaaaaa;
+     border-radius:4px ;
+     cursor: pointer;
+     li{
+         cursor: pointer;
+     }
+}
+.drop_hover{
+    background: @bgGray !important;
+}
+
+/*输入框*/
+.snc_input{
+    width: 190px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    border:1px solid #aaaaaa;
+    display: inline-block;
+    cursor: text !important;
+    padding-right: 8px;
+    text-indent: 8px;
+}
+
+/*checkbox勾选框*/
+.snc_checkbox{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    cursor: pointer;
+    position:relative;
+}
+.snc_checkbox_checked{
+    background: url(../image/icon.png) no-repeat 0 -38px;
+}
+.snc_checkbox_label{
+    height: 14px;
+    width: 88px;
+    text-indent: 9px;
+    line-height: 14px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/*scn_textarea*/
+.scn_textarea{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: @bgWhite;
+    resize: none;
+    margin: 0 !important;
+    padding: 8px;
+}
+

@@ -1,0 +1,898 @@
+@charset "UTF-8";
+/*树*/
+.tree {
+    border-bottom: 1px #f8f8f8 solid;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #333;
+}
+
+.tree li {
+    white-space: nowrap;
+    border-top: 1px #f8f8f8 solid;
+    border-bottom: 1px #f8f8f8 solid;
+}
+
+.tree li:hover {
+    /*border-top: 1px #b4ddf7 solid;*/
+    /*border-bottom: 1px #b4ddf7 solid;*/
+}
+
+.tree li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*树节点高宽*/
+.tree-node {
+    border-top: 1px #f8f8f8 solid;
+    border-bottom: 1px #f8f8f8 solid;
+    height: 40px;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #f8f8f8 right 0 repeat-y;
+}
+
+.tree-hit {
+    cursor: pointer;
+}
+.tree ul li .tree-node ,.tree ul li .tree-file {
+	height:40px;
+}
+
+.tree-expanded, .tree-collapsed, .tree-folder, .tree-file, .tree-checkbox, .tree-indent {
+    display: inline-block;
+    width: 18px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    overflow: hidden;
+    /*margin-right: 10px;*/
+}
+
+.tree-expanded {
+    background: url('../images/accordion_arrows.png') no-repeat -16px 8px;
+    margin-top: 3px;
+    /*float:right;*/
+}
+
+.tree-expanded-hover {
+   /*background: url('../images/tree_icons.png') no-repeat -50px 0px;*/
+}
+
+.tree-collapsed {
+    background: url('../images/accordion_arrows.png') no-repeat 0px 8px;
+    margin-top: 3px;
+  /*  float:right;*/
+    height:32px;
+}
+
+.tree-collapsed-hover {
+    /*background: url('../images/tree_icons.png') no-repeat -32px 0px;*/
+}
+
+.tree-lines .tree-expanded, .tree-lines .tree-root-first .tree-expanded {
+    background: url('../images/tree_icons.png') no-repeat -144px 0;
+}
+
+.tree-lines .tree-collapsed, .tree-lines .tree-root-first .tree-collapsed {
+    background: url('../images/tree_icons.png') no-repeat -128px 0;
+}
+
+.tree-lines .tree-node-last .tree-expanded, .tree-lines .tree-root-one .tree-expanded {
+    background: url('../images/tree_icons.png') no-repeat -80px 0;
+}
+
+.tree-lines .tree-node-last .tree-collapsed, .tree-lines .tree-root-one .tree-collapsed {
+    background: url('../images/tree_icons.png') no-repeat -64px 0;
+}
+
+.tree-line {
+    background: url('../images/tree_icons.png') no-repeat -176px 0;
+}
+
+.tree-join {
+    background: url('../images/tree_icons.png') no-repeat -192px 0;
+}
+
+.tree-joinbottom {
+    background: url('../images/tree_icons.png') no-repeat -160px 0;
+}
+
+.tree-folder {
+    background: url('../images/tree_icons.png') no-repeat -208px 0;
+}
+
+.tree-folder-open {
+    background: url('../images/tree_icons.png') no-repeat -224px 0;
+}
+
+.tree-file {
+    background: url('../images/tree_icons.png') no-repeat -240px 0;
+}
+
+.tree-loading {
+    background: url('../images/loading.gif') no-repeat center center;
+}
+
+.tree-checkbox0 {
+    background: url('../images/tree_icons.png') no-repeat -208px -18px;
+}
+
+.tree-checkbox1 {
+    background: url('../images/tree_icons.png') no-repeat -224px -18px;
+}
+
+.tree-checkbox2 {
+    background: url('../images/tree_icons.png') no-repeat -240px -18px;
+}
+.icon-analyze {
+background: url('../icons/impact_black.png') no-repeat center center !important;
+}
+.icon-analyze_white {
+background: url('../icons/impact_white.png') no-repeat center center !important;
+}
+.tree ul li .tree-title{
+	height: 58px;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding-top:0px;
+    font-family: "Microsoft YaHei" !important;
+    color: #666666
+}
+/*树节点文字*/
+.tree-title {
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    font-family: "Microsoft YaHei" !important;
+    color: #333333
+}
+
+.tree-node-proxy {
+    font-size: 12px;
+    line-height: 40px;
+    padding: 0 2px 0 20px;
+    border-width: 1px;
+    border-style: solid;
+    z-index: 9900000;
+}
+
+.tree-dnd-icon {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 18px;
+    left: 2px;
+    top: 50%;
+    margin-top: -9px;
+}
+
+.tree-dnd-yes {
+    background: url('../images/tree_icons.png') no-repeat -256px 0;
+}
+
+.tree-dnd-no {
+    background: url('../images/tree_icons.png') no-repeat -256px -18px;
+}
+
+.tree-node-top {
+    border-top: 1px dotted red;
+}
+
+.tree-node-bottom {
+    border-bottom: 1px dotted red;
+}
+
+.tree-node-append .tree-title {
+    border: 1px dotted red;
+}
+
+.tree-editor {
+    border: 1px solid #ccc;
+    font-size: 12px;
+    height: 14px !important;
+    height: 18px;
+    line-height: 14px;
+    padding: 1px 2px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+}
+
+/*树节点常规状态*/
+.tree-node-proxy {
+    border-color: #c0d1dd;
+    background: #e2eef7;
+    color: #333;
+}
+
+/*树节点鼠标悬浮状态*/
+.tree-node-hover {
+    background: #edf0f5;
+    color: #007dc4;
+    border-top-color: #edf0f5;
+    border-bottom-color: #edf0f5;
+}
+
+/*树节点选定状态*/
+.tree-node-selected {
+    border-top: 1px solid #edf0f5;
+    border-bottom: 1px solid #edf0f5;
+    background: #edf0f5 right 0 no-repeat;
+}
+
+.tree-node-selected .tree-node-hover {
+    border-top-color: #edf0f5;
+    border-bottom-color: #edf0f5;
+}
+
+.icon_menu_modelsystem {
+	background: url(../icons/modelmanage/menu_system.png) no-repeat center
+		center
+}
+
+.icon_menu_modelsystem_white {
+	background: url(../icons/modelmanage/menu_system_white.png) no-repeat
+		center center
+}
+
+.icon_menu_model {
+	background: url(../icons/modelmanage/menu_model.png) no-repeat center
+		center
+}
+
+.icon_menu_model_white {
+	background: url(../icons/modelmanage/menu_model_white.png) no-repeat
+		center center
+}
+
+.icon_menu_baseline {
+	background: url(../icons/modelmanage/menu_baseline.png) no-repeat center
+		center
+}
+
+.icon_menu_baseline_white {
+	background: url(../icons/modelmanage/menu_baseline_whtie.png) no-repeat
+		center center
+}
+
+.icon_menu_pdmtag {
+	background: url(../icons/modelmanage/menu_pdm.png) no-repeat center
+		center
+}
+
+.icon_menu_pdmtag_white {
+	background: url(../icons/modelmanage/menu_pdm_white.png) no-repeat
+		center center
+}
+
+.icon-chart_pie3 {
+	background: url(../icons/difference/menu_pdm_diff.png) no-repeat center
+		center
+}
+
+.icon-chart_pie3_white {
+	background: url(../icons/difference/menu_pdm_diff_white.png) no-repeat
+		center center
+}
+
+.icon-reload2 {
+	background: url(../icons/difference/menu_data_diff.png) no-repeat center
+		center
+}
+
+.icon-reload2_white {
+	background: url(../icons/difference/menu_data_diff_white.png) no-repeat
+		center center
+}
+
+.icon_comparing_the_record {
+	background: url(../icons/difference/comparing_the_record.png) no-repeat
+		center center
+}
+
+.icon_comparing_the_record_white {
+	background: url(../icons/difference/comparing_the_record_white.png)
+		no-repeat center center
+}
+
+.icon-report_go3 {
+	background: url(../icons/modelmanage/application_history.png) no-repeat
+		center center
+}
+
+.icon-report_go3_white {
+	background: url(../icons/modelmanage/application_history_white.png)
+		no-repeat center center
+}
+
+.icon-report_go5 {
+	background: url(../icons/modelmanage/index_history.png) no-repeat center
+		center
+}
+
+.icon-report_go5_white {
+	background: url(../icons/modelmanage/index_history_white.png) no-repeat
+		center center
+}
+
+.icon-report_go4 {
+	background: url(../icons/modelmanage/other_history.png) no-repeat center
+		center
+}
+
+.icon-report_go4_white {
+	background: url(../icons/modelmanage/other_history_white.png) no-repeat
+		center center
+}
+
+.icon-report_go6 {
+	background: url(../icons/modelmanage/waitfor_history.png) no-repeat
+		center center
+}
+
+.icon-report_go6_white {
+	background: url(../icons/modelmanage/waitfor_history_white.png)
+		no-repeat center center
+}
+
+.icon-sys1 {
+	background: url(../icons/modelmanage/table_strategy_management.png)
+		no-repeat center center
+}
+
+.icon-sys1_white {
+	background:
+		url(../icons/modelmanage/table_strategy_management_white.png)
+		no-repeat center center
+}
+
+.icon-cog1 {
+	background: url(../icons/modelmanage/activate_task.png) no-repeat center
+		center
+}
+
+.icon-cog1_white {
+	background: url(../icons/modelmanage/activate_task_white.png) no-repeat
+		center center
+}
+
+.icon-cog2 {
+	background: url(../icons/modelmanage/not_activate_task.png) no-repeat
+		center center
+}
+
+.icon-cog2_white {
+	background: url(../icons/modelmanage/not_activate_task_white.png)
+		no-repeat center center
+}
+
+.icon-search5 {
+	background: url(../icons/modelmanage/task_run_status.png) no-repeat
+		center center
+}
+
+.icon-search5_white {
+	background: url(../icons/modelmanage/task_run_status_white.png)
+		no-repeat center center
+}
+
+.icon-search4 {
+	background: url(../icons/modelmanage/influencedegree1.png) no-repeat
+		center center 
+}
+
+.icon-search4_white {
+	background: url(../icons/modelmanage/influencedegree2_white.png)
+		no-repeat center center 
+}
+
+.icon-chart_pie1 {
+	background: url(../icons/modelmanage/influencedegree3.png) no-repeat
+		center center 
+}
+
+.icon-chart_pie1_white {
+	background: url(../icons/modelmanage/influencedegree4_white.png)
+		no-repeat center center 
+}
+
+.icon-usergo1 {
+	background: url(../icons/modelmanage/user_manage.png) no-repeat center
+		center
+}
+
+.icon-usergo1_white {
+	background: url(../icons/modelmanage/user_manage_white.png) no-repeat
+		center center
+}
+
+.icon-group1 {
+	background: url(../icons/modelmanage/role_manage.png) no-repeat center
+		center
+}
+
+.icon-group1_white {
+	background: url(../icons/modelmanage/role_manage_white.png) no-repeat
+		center center
+}
+
+.icon-usergo2 {
+	background: url(../icons/modelmanage/system_parameter.png) no-repeat
+		center center
+}
+
+.icon-usergo2_white {
+	background: url(../icons/modelmanage/system_parameter_white.png)
+		no-repeat center center
+}
+
+.icon-page {
+	background: url(../icons/modelmanage/business_management.png) no-repeat
+		center center
+}
+
+.icon-page_white {
+	background: url(../icons/modelmanage/business_management_white.png)
+		no-repeat center center
+}
+
+.icon-process_definition {
+	background: url(../icons/modelmanage/process_definition.png) no-repeat
+		center center
+}
+
+.icon-process_definition_white {
+	background: url(../icons/modelmanage/process_definition_white.png)
+		no-repeat center center
+}
+
+.icon-database4 {
+	background: url(../icons/modelmanage/data_source_management.png)
+		no-repeat center center
+}
+
+.icon-database4_white {
+	background: url(../icons/modelmanage/data_source_management_white.png)
+		no-repeat center center
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-family: '微软雅黑'
+}
+
+#fm {
+	margin: 0;
+	padding: 30px;
+	color: #053E72
+}
+#fmAdd {
+	margin: 0;
+	padding: 30px;
+	color: #053E72
+}
+
+.ftitle {
+	font-size: 14px;
+	font-weight: 700;
+	padding: 5px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #2882AD;
+	color: #053E72
+}
+
+.fitem {
+	margin-bottom: 15px;
+	color: #053E72
+}
+
+.fitem label {
+	font-size: 13px;
+	display: inline-block;
+	width: 60px;
+	color: #053E72;
+	text-align:right;
+	vertical-align:middle
+}
+
+.fitem .easyui-validatebox,.fitem .validatebox-text {
+ 	height: 20px;
+	line-height: 20px;
+	width: 180px;
+	vertical-align:middle
+}
+
+.easyui-window .easyui-tree .tree-node-selected {
+	background: #0e83b8;
+	color: #fff
+}
+
+.easyui-window .easyui-tree .tree-node {
+	height: 18px;
+	white-space: nowrap
+}
+
+.easyui-window .tree-node .tree-checkbox,.easyui-window .tree-node .tree-collapsed,.easyui-window .tree-node .tree-expanded,.easyui-window .tree-node .tree-file,.easyui-window .tree-node .tree-folder,.easyui-window .tree-node .tree-indent
+	{
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	line-height: 18px;
+	vertical-align: top;
+	overflow: hidden;
+	margin-right: 5px
+}
+
+.easyui-window .tree-node .tree-title {
+	font-size: 12px;
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding: 0 2px;
+	height: 18px;
+	line-height: 18px;
+	font-family: "Microsoft YaHei" !important
+}
+
+.easyui-window .tree li {
+	border-bottom: 0 #d5d5d5 solid
+}
+
+.datagrid-body .datagrid-btable .tree-checkbox,.datagrid-body .datagrid-btable .tree-collapsed,.datagrid-body .datagrid-btable .tree-expanded,.datagrid-body .datagrid-btable .tree-file,.datagrid-body .datagrid-btable .tree-folder,.datagrid-body .datagrid-btable .tree-indent
+	{
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	line-height: 18px;
+	vertical-align: top;
+	overflow: hidden;
+	margin-right: 5px;
+	margin-top: 10px
+}
+
+.datagrid-body .datagrid-btable .tree-collapsed {
+	background: url(../images/tree_icons.png) no-repeat 0 0;
+	margin-top: 12px
+}
+
+.datagrid-body .datagrid-btable .tree-folder {
+	background: url(../images/tree_icons.png) no-repeat -208px 0;
+	margin-top: 12px
+}
+
+.datagrid-body .datagrid-btable .tree-expanded,.datagrid-body .datagrid-btable .tree-expanded-hover
+	{
+	background: url(../images/tree_icons.png) no-repeat -22px 0;
+	margin-top: 12px
+}
+
+.combo-p {
+	border: 1px solid #CCE6FF
+}
+
+.combo-panel {
+	overflow: auto;
+	:!
+	important
+}
+
+.datagrid {
+	border: 1px solid #c2cdd3
+}
+
+/*********************************设备管理  by maihs 2014-02-19*********************************************/
+/*项目管理*/
+.inco-project {
+	background: url('../icons/modelmanage/inco-project.png') no-repeat
+		center center !important;
+}
+
+.inco-project_white {
+	background: url('../icons/modelmanage/inco-project_white.png') no-repeat
+		center center !important;
+}
+/*设备维护*/
+.icon-weifu {
+	background: url('../icons/modelmanage/icon-weifu.png') no-repeat center
+		center !important;
+}
+
+.icon-weifu_white {
+	background: url('../icons/modelmanage/icon-weifu_white.png') no-repeat
+		center center !important;
+}
+/*设备报表*/
+.icon-rport {
+	background: url('../icons/modelmanage/icon-rport.png') no-repeat center
+		center !important;
+}
+
+.icon-rport_white {
+	background: url('../icons/modelmanage/icon-rport_white.png') no-repeat
+		center center !important;
+}
+/*设备展示*/
+.icon-display {
+	background: url('../icons/modelmanage/icon-display.png') no-repeat
+		center center !important;
+}
+
+.icon-display_white {
+	background: url('../icons/modelmanage/icon-display_white.png') no-repeat
+		center center !important;
+}
+/*网络设备*/
+.icon-network {
+	background: url('../icons/modelmanage/icon-network.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+
+.icon-network_white {
+	background: url('../icons/modelmanage/icon-network.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+/*小型机*/
+.icon-minicomputer {
+	background: url('../icons/modelmanage/icon-minicomputer.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+
+.icon-minicomputer_white {
+	background: url('../icons/modelmanage/icon-minicomputer.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+/*PC服务器*/
+.icon-PC {
+	background: url('../icons/modelmanage/icon-PC.png') no-repeat center
+		center !important;
+	margin-left: 10px;
+}
+
+.icon-PC_white {
+	background: url('../icons/modelmanage/icon-PC.png') no-repeat center
+		center !important;
+	margin-left: 10px;
+}
+/*存储*/
+.icon-saveequipment {
+	background: url('../icons/modelmanage/icon-save.png') no-repeat left
+		center !important;
+	margin-left: 10px;
+}
+
+.icon-saveequipment_white {
+	background: url('../icons/modelmanage/icon-save.png') no-repeat center
+		center !important;
+	margin-left: 10px;
+}
+/*存储(磁盘列阵)*/
+.icon-storage-disk {
+	background: url('../icons/modelmanage/icon-storage-disk.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+
+.icon-storage-disk_white {
+	background: url('../icons/modelmanage/icon-storage-disk.png') no-repeat
+		center center !important;
+	margin-left: 10px;
+}
+/*存储(光纤交换机)*/
+.icon-opticalswitches {
+	background: url('../icons/modelmanage/icon-opticalswitches.png')
+		no-repeat center center !important;
+	margin-left: 10px;
+}
+
+.icon-opticalswitches_white {
+	background: url('../icons/modelmanage/icon-opticalswitches.png')
+		no-repeat center center !important;
+	margin-left: 10px;
+}
+/*******************************end*****************************************************/
+
+/*********************************设备管理  by maihs 2014-03-05*******************************/
+/*接口变更申请*/
+/******************************************************************************************/
+/*********************************模型管理  by 李俊勇 2014-02-19*********************************************/
+/*变更管理*/
+.inco-change-manage {
+	background: url('../icons/change-manage_black.png') no-repeat center
+		center !important;
+}
+
+.inco-change-manage_white {
+	background: url('../icons/change-manage_white.png') no-repeat center
+		center !important;
+}
+
+/*差异对比*/
+.inco-difference-compare {
+	background: url('../icons/difference-compare_black.png') no-repeat
+		center center !important;
+}
+
+.inco-difference-compare_white {
+	background: url('../icons/difference-compare_white.png') no-repeat
+		center center !important;
+}
+
+/*模型维护*/
+.inco-model-maintain {
+	background: url('../icons/model-maintain_black.png') no-repeat center
+		center !important;
+}
+
+.inco-model-maintain_white {
+	background: url('../icons/model-maintain_white.png') no-repeat center
+		center !important;
+}
+
+/*数据查询*/
+.icon-data-query {
+	background: url('../icons/model-query_black.png') no-repeat center
+		center !important;
+}
+
+.icon-data-query_white {
+	background: url('../icons/model-query_white.png') no-repeat center
+		center !important;
+}
+
+/*影响度分析*/
+.icon-analyze {
+	background: url('../icons/impact_black.png') no-repeat center center
+		!important;
+}
+
+.icon-analyze_white {
+	background: url('../icons/impact_white.png') no-repeat center center
+		!important;
+}
+
+/*浏览*/
+.inco-browse {
+	background: url('../icons/browse.png') no-repeat center center
+		!important;
+}
+/*模型管理*/
+.inco-model-manage {
+	background: url('../icons/model-manage.png') no-repeat center center
+		!important;
+}
+
+/*******************************模型管理end*****************************************************/
+
+/*******************************接口管控管理*****************************************************/
+/*接口维护*/
+.icon-interface-waifu {
+	background: url('../icons/interface-waifu.png') no-repeat center center
+		!important;
+}
+
+.icon-interface-waifu_white {
+	background: url('../icons/interface-waifu_white.png') no-repeat center
+		center !important;
+}
+
+/*接口信息展示*/
+.icon-if-display {
+	background: url('../icons/if-display.png') no-repeat center center
+		!important;
+}
+
+.icon-if-display_white {
+	background: url('../icons/if-display_white.png') no-repeat center center
+		!important;
+}
+
+/*接口信息稽核维护*/
+.icon-if-check-weifu {
+	background: url('../icons/if-check-weifu.png') no-repeat center center
+		!important;
+}
+
+.icon-if-check-weifu_white {
+	background: url('../icons/if-check-weifu_white.png') no-repeat center
+		center !important;
+}
+
+/*接口信息稽核展示*/
+.icon-if-check-display {
+	background: url('../icons/if-check-display.png') no-repeat center center
+		!important;
+}
+
+.icon-if-check-display_white {
+	background: url('../icons/if-check-display_white.png') no-repeat center
+		center !important;
+}
+
+/*接口变更查询*/
+.icon-if-change-query {
+	background: url('../icons/if-change-query.png') no-repeat center center
+		!important;
+}
+
+.icon-if-change-query_white {
+	background: url('../icons/if-change-query_white.png') no-repeat center
+		center !important;
+}
+
+/*接口变更申请*/
+.icon-if-change-apply {
+	background: url('../icons/if-change-apply.png') no-repeat center center
+		!important;
+}
+
+.icon-if-change-apply_white {
+	background: url('../icons/if-change-apply_white.png') no-repeat center
+		center !important;
+}
+/*******************************接口管控管理end**************************************************/
+.icon-add2_white {
+	background: url('icons/modelmanage/add_white.png') no-repeat center
+		center;
+}
+
+
+/*未激活任务*/
+.icon-task {
+    background: url('../icons/modelmanage/not_activate_task.png') no-repeat center center;
+}
+
+.icon-task1 {
+    background: url('../icons/modelmanage/not_activate_task1.png') no-repeat center center;
+}
+
+.icon-task_white {
+    background: url('../icons/modelmanage/not_activate_task_white.png') no-repeat center center;
+}
+
+
+/*已激活任务*/
+.icon-activation {
+    background: url('../icons/modelmanage/activate_task.png') no-repeat center center;
+}
+
+.icon-activation_white {
+    background: url('../icons/modelmanage/activate_task_white.png') no-repeat center center;
+}
+
+
+/*任务日志*/
+.icon-runningstate {
+    background: url('../icons/modelmanage/task_run_status.png') no-repeat center center;
+}
+
+.icon-runningstate_white {
+    background: url('../icons/modelmanage/task_run_status_white.png') no-repeat center center;
+}
+.icon-log-1 {
+    background: url('../icons/modelmanage/icon_log_1.png') no-repeat center center;
+}
+
+/*容量分析*/
+.icon-overall-view {
+    background: url('../icons/modelmanage/icon_overall_view.png') no-repeat center center;
+}
+.icon-index {
+    background: url('../icons/modelmanage/index.png') no-repeat center center;
+}

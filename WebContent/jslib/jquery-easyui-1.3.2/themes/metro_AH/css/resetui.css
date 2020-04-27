@@ -1,0 +1,518 @@
+/*重设样式*/
+@charset "utf-8";
+
+/*bodycontent*/
+#bodycontent{
+	margin: 0 !important;
+	padding:  0 20px;
+}
+
+/*清除浮动*/
+/*清除浮动*/
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+} 
+.clearfix{
+    zoom:1;
+}
+
+/*table*/
+.datagrid-body{
+	background: #fff;
+}
+.datagrid-view{
+	height: 83%;
+	/*max-height: 83%;*/
+}
+.datagrid-view2 .treegrid-tr-tree{
+	display: none;
+}
+.datagrid .datagrid-pager{
+	padding-top: 14px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border: 0;
+}
+.pagination-info{
+	margin-right: 22px;
+}
+.datagrid-header-inner>.datagrid-htable{
+	border-right:1px solid #eee;
+}
+
+.datagrid-header{
+	border: 0;
+	background: #fff;
+}
+.datagrid-body>.datagrid-btable{
+	border-right:1px solid #eee;
+}
+/* 表格head */
+/*.datagrid-body-inner>.datagrid-btable{
+	border-left:1px solid #bbb;
+}*/
+.datagrid-row{
+	background: #fff;
+}
+.datagrid-row-alt{
+	background: #f9f9f9;
+}
+.datagrid-body td,.datagrid-footer td,.datagrid-header td{
+	height: 38px;
+	/*background: #fff;*/
+	cursor: pointer;
+}
+/*.datagrid-row-alt td{
+	background: #f9f9f9 !important;
+}*/
+.datagrid-body td{
+	color: #666 !important;
+}
+.datagrid-body td a{
+	color: #666;
+}
+.datagrid-header td,.datagrid-footer td{
+	color: #333 !important;
+}
+.datagrid-body td,.datagrid-footer td{
+	border-color:#fff;
+	border-right: 0;
+	padding-right: 0;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.datagrid-view1 .datagrid-header .datagrid-header-inner td{
+	border-left: 0;
+}
+.datagrid-view1 .datagrid-header .datagrid-header-inner .datagrid-htable{
+	border-left: 1px solid #eee;
+}
+.datagrid-body .datagrid-body-inner td{
+	border-left: 0;
+}
+/*.datagrid-body .datagrid-body-inner .datagrid-cell-rownumber{
+	border-left: 1px solid #eee;
+}*/
+.datagrid-view1 .datagrid-body .datagrid-btable{
+	border-left: 1px solid #eee !important;
+}
+
+/*.datagrid-view2 .datagrid-body .datagrid-row td:nth-child(1) *{
+	font-weight: bold !important;
+	color: #007dc4;
+}*/
+.datagrid-cell-rownumber{
+	width: 29px;
+	/*width: 42px;*/
+}
+.datagrid-header td{
+	background: #f7f8fa;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-right: 0 !important;
+	border-top: 1px solid #eee;
+	height: 38px;
+}
+.datagrid-header td *{
+	font-weight: normal !important;
+	font-size: 14px;
+	color: #333333;
+}
+.datagrid-header-over{
+	background: #eee !important;
+}
+.datagrid-header-over td{
+	background: #eee !important;
+}
+.datagrid-td-rownumber .datagrid-cell-rownumber{
+	/*background: #fff;*/
+	color: #007dc4;
+	font-size: 16px;
+}
+.datagrid-row .datagrid-td-rownumber .datagrid-cell-rownumber{
+	background: #fff;
+	padding: 0 5px 0 0;
+}
+.datagrid-row-alt .datagrid-td-rownumber .datagrid-cell-rownumber{
+	background: #f9f9f9;
+}
+.datagrid .datagrid-pager{
+	background: #FFFFFF;
+	border: 0;
+}
+.datagrid-row-over td,.datagrid-row-over .datagrid-td-rownumber .datagrid-cell-rownumber{ 
+	background: #d8e6fc !important;
+}
+/*.datagrid-row-over td{
+	border-bottom: 1px solid #88c2fd;
+	border-top: 1px solid #88c2fd;
+	margin-top: -10px;
+}*/
+/*data-grid-footer*/
+select.pagination-page-list{
+	height: 28px;
+	min-width: 46px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	margin: 0 10px;
+	outline: none;
+}
+.pagination-btn-separator{
+	display: none;
+}
+.pagination .pagination-num{
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+}
+.pagination td{
+	padding: 0 2px;
+}
+/*布局*/
+.datagrid .panel-body{
+	padding: 0 20px;
+	background: #fff;
+}
+
+/*easyui-tabs 下的 datagrid*/
+.easyui-tabs .panel-body{
+	background: #fff !important;
+}
+.easyui-tabs .datagrid .panel-body{
+	border: 0 !important;
+	padding: 0 !important;
+}
+.easyui-tabs .panel-body .datagrid{
+	border: 0 !important;
+}
+.easyui-tabs .panel{
+	border: 0 !important;
+}
+
+/*toolbar*/
+.datagrid-toolbar{
+	background: none !important;
+	border: 0;
+	padding: 18px 0 7px 0;
+	height: auto;
+	min-height: 32px;
+	max-height: 82px;
+	overflow: hidden;
+}
+
+/*系统全局按钮样式*/
+a.l-btn, a.l-btn span.l-btn-left{
+	background: #42a1d7 !important;
+	color: #fff;
+}
+a.l-btn{
+	border: 1px solid #42a1d7 !important;
+	border-radius: 3px !important;
+}
+a.l-btn:link,a.l-btn:visited{
+	border: 1px solid #42a1d7 !important;
+	background: #42a1d7 !important;
+	color: #fff;
+}
+a.l-btn:hover{
+	border: 1px solid #0073b4 !important;
+	background: #0073b4 !important;
+	color: #fff;
+}
+a.l-btn:hover span.l-btn-left{
+	background: #0073b4 !important;
+}
+a.l-btn span span.l-btn-text{
+	outline: none;
+}
+
+/*table跳转页按钮样式*/
+.pagination a.l-btn,.pagination a.l-btn span.l-btn-left{
+	background: #FFFFFF !important;
+}
+.pagination a.l-btn{
+	border: 1px solid #aaa !important;
+	border-radius: 3px !important;
+}
+.pagination a.l-btn:hover{
+	border: 1px solid #007dc4 !important;
+	color: #007dc4;
+}
+
+/* toolbar的按钮 */
+.toolbar a.l-btn,.snc_toolbar a.l-btn{
+	border-radius:4px; 
+}
+.toolbar a.l-btn,.toolbar a.l-btn span.l-btn-left,.snc_toolbar a.l-btn,.snc_toolbar a.l-btn span.l-btn-left{
+	background: #42a1d7 !important;
+	color: #fff;
+	padding: 3px 3px 3px 3px;
+}
+.toolbar a.l-btn,.snc_toolbar a.l-btn{
+	border: 1px solid #42a1d7 !important;
+	border-radius: 3px !important;
+}
+.toolbar a.l-btn:hover,.snc_toolbar a.l-btn:hover{
+	border: 1px solid #0073b4 !important;
+	background: #0073b4 !important;
+	color: #fff;
+}
+.toolbar a.l-btn:hover span.l-btn-left,.snc_toolbar a.l-btn:hover span.l-btn-left{
+	background: #0073b4 !important;
+}
+/*header*/
+.panel-header{
+	padding-left: 20px;
+	background: #FFF !important;
+}
+
+/*下拉框 combo*/
+.combo{
+	height: 28px !important;
+	border-color: #bbbbbb;
+	background: #fff;
+	color: #666;
+	border-radius:3px;
+	padding-right: 6px;
+}
+.combo .combo-text{
+ 	height: 28px !important;
+	line-height: 28px !important;
+	background: #fff;
+	color: #666;
+	text-indent:10px;
+}
+.combo .combo-arrow{
+ 	height: 28px !important;
+ 	background-color:#fff;
+}
+.combo .combo-arrow-hover{
+ 	background-color:#fff;
+}
+.combo-p{
+ 	border: 1px solid #bbb;
+ 	width: 100%;
+}
+.combobox-item{
+ 	height: 28px;
+ 	line-height: 28px;
+ 	text-indent: 10px;
+ 	cursor: pointer;
+ 	white-space: nowrap;
+ 	overflow: hidden;
+}
+.combobox-item-selected{
+ 	background: #f1f1f1;
+}
+.combobox-item-hover{
+ 	background: #f1f1f1;
+}
+
+/*tab*/
+.tab_col5{
+	width: 19%;
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+}
+.tab_col5>span{
+	max-width: 75%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*插件tabs*/
+.tabs-header{
+	border: 0 !important;
+}
+.tabs-panels{
+	border: 0 !important;
+}
+
+#tabs{
+	height: auto !important;
+}
+.tabs{
+	height: 33px !important;
+	padding: 0;
+  	margin-bottom: 18px;
+}
+#tabs .datagrid{
+	border: 0;
+}
+#tabs .tabs-panels{
+	border: 0;
+}
+#tabs .panel{
+	border: 0;
+}
+#tabs .datagrid .panel-body{
+	padding: 0;
+	width: 100% !important;
+}
+.tabs>li{
+	height: 32px;
+	line-height: 32px;
+	border-radius: 4px;
+	border-color: #eeeeee;
+	/*background: #eeeeee;*/
+	color: #666;
+	border: 0 !important;
+}
+.tabs>li>a{
+	height: 30px !important;
+}
+.tabs li a.tabs-inner{
+	border: 0;
+	padding: 0;
+}
+.tabs li a.tabs-inner:hover{
+	background: #fff;
+}
+.tabs>li>a>.tabs-title{
+	line-height: 28px;
+	height: 28px;
+	display: inline-block;
+	padding: 0 8px;
+	border-bottom: 1px solid #fff;
+	color: #1b74b6;
+	border: 0;
+	font-weight: normal;
+}
+.tabs>li>a>.tabs-title:hover{
+	border: 0;
+	background: #eeeeee;
+	text-decoration: none;
+}
+.tabs>.tabs-selected>.tabs-inner{
+	border-top: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+}
+.tabs>.tabs-selected>.tabs-inner>.tabs-title{
+	color: #666;
+	background: #fff;
+	font-size: 12px !important;
+}
+.conclusion_cion0{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_0.png) no-repeat;
+}
+.conclusion_cion1{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_1.png) no-repeat;
+}
+.conclusion_cion2{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_2.png) no-repeat;
+}
+.conclusion_cion3{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_3.png) no-repeat;
+}
+.conclusion_cion4{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_4.png) no-repeat;
+}
+.conclusion_cion5{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_5.png) no-repeat;
+}
+.conclusion_cion6{
+	width: 40px;
+	height: 40px;
+	background:url(../../../../sncjs/image/conclusion_6.png) no-repeat;
+}
+.guide_stepbar_bg{
+	background:url(../../../../sncjs/image/guide_stepbar_bg.png) repeat-x;
+}
+.guide_stepbar_1{
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/guide_stepbar_1.png) no-repeat;
+}
+.guide_stepbar_2{
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/guide_stepbar_2.png) no-repeat;
+}
+.guide_stepbar_3{
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/guide_stepbar_3.png) no-repeat;
+}
+.pandect_0{
+	background:url(../../../../sncjs/image/pandect_0.png) no-repeat center;
+}
+.pandect_1{
+	background:url(../../../../sncjs/image/pandect_1.png) no-repeat center;
+}
+.pandect_2{
+	background:url(../../../../sncjs/image/pandect_2.png) no-repeat center;
+}
+.pandect_3{
+	background:url(../../../../sncjs/image/pandect_3.png) no-repeat center;
+}
+::-ms-clear, ::-ms-reveal{
+	display: none;
+}
+
+/*
+	icon
+*/
+.icon_s_home{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/home_s.png) no-repeat;
+}
+.icon_tab_cicle{
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/tab_0.png) no-repeat;
+}
+.icon_tanup{
+	width: 14px;
+	height: 13px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/guide_tan.png) no-repeat;
+}
+.icon_setting{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/icon.png) no-repeat 0 -56px;
+	cursor: pointer;
+}
+.icon_drop{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/icon.png) no-repeat -1px -78px;
+	cursor: pointer;
+}
+.icon_search_blue{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background:url(../../../../sncjs/image/icon.png) no-repeat 0px -95px;
+	cursor: pointer;	
+}
